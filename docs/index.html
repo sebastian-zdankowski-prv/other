@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#14213d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="CODE@MIT"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"><title>CODE@MIT 2026 — Conference Planner</title>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d1c3b"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="CODE@MIT"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"><title>CODE@MIT 2026 — Conference Planner</title>
 <style>
 
 :root{--navy:#13213a;--navy2:#26395e;--paper:#f7f8fb;--white:#fff;--ink:#1c2941;--muted:#6c7990;--line:#e8ecf3;--accent:#fa786d;--indigo:#535ee4;--teal:#109e88;--radius:18px}
@@ -49,6 +49,106 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 }
 @media print{.nav,.bar,.actions,.pick,.details-toggle,.stats,.update-banner{display:none!important}body{padding:0;background:#fff}.hero{background:#fff;color:#111;padding:8px}.hero p{color:#555}.session,.panel{box-shadow:none;break-inside:avoid}}
 
+
+/* CODE@MIT 2026 · Premium iPhone edition v8 */
+:root{--navy:#0d1c3b;--navy2:#203863;--paper:#f5f7fb;--ink:#14223d;--muted:#6b7891;--line:#e4eaf3;--accent:#ff806c;--indigo:#565ae8;--teal:#199f91}
+html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{background:linear-gradient(180deg,#f1f4fb 0,#f7f8fc 360px,#f6f8fc 100%);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;letter-spacing:-.006em}
+.hero{background:radial-gradient(circle at 92% 4%,#314c86 0,transparent 42%),linear-gradient(133deg,#0c1a35 0%,#152c51 60%,#263c68 100%);padding:34px 0 33px;box-shadow:0 12px 36px #0d1c3b15}
+.hero:before{content:"";position:absolute;width:280px;height:280px;right:-65px;top:-148px;border:1px solid #ffffff28;border-radius:50%;transform:none;background:none}
+.hero:after{width:300px;height:300px;right:-185px;top:0;background:radial-gradient(circle,#ff8c7550,transparent 64%);border:0;border-radius:50%;transform:none}
+.eyebrow{font-size:11px;letter-spacing:.21em;color:#b2c9f5}
+.hero h1{color:#fff;font-size:clamp(35px,6vw,50px);font-weight:840;line-height:1.08;letter-spacing:-.055em;margin:13px 0 12px}
+.hero h1 .brand-accent{color:#ff9b87}
+.hero p{color:#dce7fa;font-size:14px;line-height:1.55;max-width:510px}
+.stats{margin-top:22px;gap:8px}
+.stats span{background:#ffffff13;border:1px solid #ffffff20;color:#e5efff;border-radius:999px;padding:8px 12px;font-size:12px}
+.stats #topCount{color:#ffd6c9;background:#ff806c24;border-color:#ff806c4b}
+.nav{background:#ffffffed;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.nav button{font-weight:730}
+.nav button.active{color:#4555cc}
+main.wrap{padding-top:21px}
+.agenda-intro{background:linear-gradient(125deg,#fff 0%,#fff 72%,#f1f1ff 100%);border:1px solid #e5eaf4;box-shadow:0 8px 30px #1323430b;padding:22px 24px;border-radius:22px}
+.agenda-intro .overline{color:#777da8;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.2em;margin-bottom:10px}
+.agenda-intro-row{display:flex;gap:14px;align-items:center;justify-content:space-between}
+.agenda-intro h2{font-size:clamp(23px,4vw,30px);font-weight:820;letter-spacing:-.045em;line-height:1.2;margin:0}
+.agenda-intro p{margin:12px 0 0;color:#687791;max-width:560px;font-size:13px}
+.agenda-count{background:linear-gradient(155deg,#eff0ff,#e7ebff);min-width:104px;max-width:114px;border:1px solid #dfe2fc;border-radius:17px;padding:10px 11px;text-align:center}
+.agenda-count b{font-size:26px;display:block;color:#424ecc;letter-spacing:-.04em;line-height:1}
+.agenda-count span{display:block;color:#666da4;font-size:10px;font-weight:760;margin-top:5px}
+.agenda-shortcut{margin-top:14px;background:transparent;border:0;padding:0;color:#4956c4;font-size:13px;font-weight:800}
+.bar{border-radius:17px;box-shadow:0 7px 24px #18345a12}
+.days button.on{background:#192c50;color:white;box-shadow:0 4px 12px #1b2d5226}
+.slot{margin:29px 0 11px;position:relative;font-size:11px;color:#65748e;letter-spacing:.14em;gap:10px}
+.slot:before{content:"";width:8px;height:8px;border-radius:50%;background:#ff8773;box-shadow:0 0 0 5px #ff87731f;display:inline-block;flex-shrink:0}
+.slot:after{background:linear-gradient(90deg,#ced7eb,transparent)}
+.timeline{position:relative}
+.session{border:1px solid #e3e9f3;background:white;border-radius:20px;box-shadow:0 8px 25px #11284a0d;margin:10px 0;overflow:hidden}
+.session:before{width:4px;background:#c8d5ed}
+.session.parallel:before{background:#5864d7}.session.plenary:before{background:#ff806c}.session.panelkind:before{background:#9464cf}.session.poster:before{background:#23a692}.session.info:before{background:#b2bacb}
+.session.selected{background:#fcfcff;border-color:#aab6f5;box-shadow:0 9px 28px #525fe526}
+.session.selected:before{background:#515ee6}
+.session-head{padding:17px 18px 12px;align-items:center;gap:14px}
+.session-topline{margin-bottom:10px;gap:8px}
+.session-time{display:inline-flex;align-items:center;color:#263d65;background:#edf3fc;border-radius:8px;font-variant-numeric:tabular-nums;font-weight:820;font-size:13px;letter-spacing:0;padding:6px 9px}
+.kind-badge{border-radius:8px;font-weight:780;font-size:10px;letter-spacing:.035em;padding:6px 8px}
+.title{font-size:18px;line-height:1.34;letter-spacing:-.027em;font-weight:800;color:#15233c;margin:0 0 8px}
+.room{font-size:13px;color:#68778e;line-height:1.3}
+.meta{margin-top:10px}
+.chip{border-radius:8px;background:#f1f3fa;color:#626d85}
+.chip.recommend{background:#e7f8f2;color:#127763;font-weight:780}
+.pick{background:#eef0ff;color:#4654cf;border:1px solid #dee3ff;border-radius:13px;min-width:45px;min-height:45px;font-size:23px;font-weight:550}
+.pick.on{background:#22a995;border-color:#22a995;color:#fff}
+.details-toggle{padding:2px 18px 16px;color:#4d5cc6;font-size:12px}
+.talks{background:#fafbff}
+.poster{border-radius:18px;box-shadow:0 6px 18px #102e550a}
+.num{border-radius:11px}
+.panel{border-radius:21px;box-shadow:0 7px 22px #122f5009}
+.btn{border-radius:12px;background:#1b2f54}
+.btn.alt{background:#ecf0ff;color:#4554c5}
+.counter{border-radius:15px;background:linear-gradient(120deg,#edf1ff,#fff1ef);padding:17px 16px}
+.plan-day-title h3{font-weight:830;color:#1d2b49}
+.plan-day-title span{background:#eff2fc;border-radius:20px;padding:5px 10px;color:#576c97}
+@media(max-width:749px){
+body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+.hero{padding:25px 0 27px}
+.hero h1{font-size:37px;line-height:1.05;margin:12px 0 10px;max-width:345px}
+.hero p{font-size:13px;max-width:310px}
+.hero:before{width:220px;height:220px;right:-92px;top:-110px}
+.hero:after{width:230px;height:230px;right:-138px;top:0}
+.stats{gap:7px;margin-top:17px}
+.stats span{padding:7px 10px;font-size:11px}
+main.wrap{padding-top:14px}
+.agenda-intro{padding:18px 16px;border-radius:20px;margin-bottom:14px}
+.agenda-intro h2{font-size:24px}
+.agenda-count{min-width:91px;max-width:91px;padding:9px 7px;border-radius:15px}
+.agenda-count b{font-size:25px}
+.agenda-count span{font-size:9px}
+.agenda-intro p{font-size:12px;line-height:1.55;margin-top:10px}
+.agenda-shortcut{margin-top:12px;font-size:12px}
+.nav{border-top:1px solid #e6eaf3;box-shadow:0 -12px 32px #11233b1e;background:#fffffffa}
+.nav .wrap{padding:7px 7px max(6px,env(safe-area-inset-bottom))}
+.nav button{min-height:58px;font-size:11px;gap:5px;padding:7px 3px 6px;transition:background .15s,color .15s}
+.nav button.active{background:#e9edff;color:#3649be;border-radius:13px}
+.nav button svg{width:22px;height:22px}
+.bar{position:sticky;top:0;z-index:22;margin:0 -16px 19px;border-radius:0 0 17px 17px;padding:10px 16px 12px;box-shadow:0 11px 24px #0d244b19}
+.days button{min-height:44px;font-size:14px}
+.search{flex-basis:60%}.select{flex-basis:34%}
+.slot{margin:24px 0 10px}
+.session{border-radius:18px;margin:10px 0}
+.session-head{padding:15px 14px 12px;gap:11px}
+.session-topline{gap:6px;margin-bottom:8px}
+.session-time{font-size:12px;padding:5px 8px}
+.kind-badge{font-size:9px;padding:5px 7px}
+.title{font-size:17px;margin-bottom:7px;line-height:1.32}
+.room{font-size:12px}
+.meta{margin-top:8px}
+.pick{min-width:44px;min-height:44px;border-radius:12px}
+.details-toggle{padding:0 14px 14px}
+.panel{border-radius:18px}
+.toast,.update-banner{bottom:calc(88px + env(safe-area-inset-bottom))}
+}
+@media print{.session{box-shadow:none}.hero{background:white;color:#111}.hero h1{color:#111}.agenda-intro{box-shadow:none}.agenda-shortcut{display:none}}
 </style></head><body>
 <header class="hero"><div class="wrap"><div class="eyebrow">THE CONFERENCE ON DIGITAL EXPERIMENTATION</div><h1>CODE@MIT<br>2026</h1><p>13–14 listopada 2026 · Cambridge, Massachusetts</p><div class="stats"><span>Samberg Conference Center</span><span>Boston · EST</span><span id="topCount">Wybrane sesje: 0</span></div></div></header>
 <nav class="nav" aria-label="Nawigacja aplikacji"><div class="wrap"><button data-tab="agenda" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 18h3"/></svg><span>Agenda</span></button><button data-tab="mine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.5 2.8 1.1-6.1-4.4-4.3 6.1-.8L12 3Z"/></svg><span>Mój plan <span id="navCount"></span></span></button><button data-tab="posters"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Postery</span></button><button data-tab="travel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Na miejscu</span></button></div></nav>
@@ -63,11 +163,8 @@ function kindLabel(kind){return ({Parallel:'Sesja równoległa',Plenary:'Plenarn
 function chips(s){return `<span class="chip">${esc(s.room)}</span>${s.kind==='Parallel'?`<span class="chip">Sesja ${esc(s.id)}</span>`:''}${reco(s)?'<span class="chip recommend">★ Polecane analitykom</span>':''}`}
 function card(s){let on=state.selected.has(s.id),co=on?conflict(s):[],expanded=state.open.has(s.id);return `<article class="session ${kindClass(s.kind)} ${on?'selected':''}"><div class="session-head"><div class="session-main"><div class="session-topline"><span class="session-time">${esc(s.start)}–${esc(s.end)}</span><span class="kind-badge ${kindClass(s.kind)}">${kindLabel(s.kind)}</span></div><div class="title">${esc(s.title)}</div><div class="room">${s.room?esc(s.room):'Samberg Conference Center'}</div><div class="meta">${s.kind==='Parallel'?`<span class="chip">Sesja ${esc(s.id)}</span>`:''}${reco(s)?'<span class="chip recommend">Polecane analitykom</span>':''}</div></div><button class="pick ${on?'on':''}" aria-pressed="${on?'true':'false'}" data-pick="${esc(s.id)}" aria-label="${on?'Usuń z planu':'Dodaj do planu'}">${on?'✓':'+'}</button></div>${co.length?`<div class="conflict">Konflikt godzin z: ${esc(co.join(', '))}</div>`:''}${s.talks.length?`<button class="details-toggle" data-open="${esc(s.id)}" aria-expanded="${expanded?'true':'false'}">${expanded?'Ukryj wystąpienia ↑':'Wystąpienia i prelegenci ↓'}</button>`:''}${expanded?`<div class="talks">${s.talks.map(t=>`<div class="talk"><strong>${esc(t.title)}</strong>${t.authors?`<small>${esc(t.authors)}</small>`:''}</div>`).join('')}</div>`:''}</article>`}
 function commonbar(){return `<div class="bar"><div class="days"><button data-day="1" class="${state.day===1?'on':''}">Pt 13.11</button><button data-day="2" class="${state.day===2?'on':''}">Sb 14.11</button></div><input id="search" class="search" placeholder="Szukaj: prelegent, AI, A/B, Spotify…" value="${esc(state.query)}" aria-label="Szukaj w agendzie"><select class="select" id="category"><option value="all">Wszystkie typy</option><option value="Parallel" ${state.category==='Parallel'?'selected':''}>Sesje równoległe</option><option value="Plenary" ${state.category==='Plenary'?'selected':''}>Plenarne</option><option value="Panel" ${state.category==='Panel'?'selected':''}>Panele</option><option value="Poster" ${state.category==='Poster'?'selected':''}>Postery / networking</option><option value="Info" ${state.category==='Info'?'selected':''}>Przerwy i rejestracja</option></select></div>`}
-function agenda(){let q=state.query.toLocaleLowerCase();let arr=S.filter(s=>s.day===state.day&&(state.category==='all'||s.kind===state.category)&&[s.title,s.room,s.kind,...s.talks.flatMap(t=>[t.title,t.authors])].join(' ').toLocaleLowerCase().includes(q));let last='';let count=S.filter(s=>state.selected.has(s.id)&&s.day===state.day).length;return `<div class="panel agenda-intro"><h2>${state.day===1?'Piątek, 13 listopada':'Sobota, 14 listopada'}</h2><p class="hint">Wybierz wydarzenia, a znajdziesz je w zakładce „Mój plan”. Wszystkie godziny w Bostonie (EST).</p><div class="summary"><div class="summary-pill"><strong>${count}</strong> wybranych tego dnia</div><div class="summary-pill coral"><strong>${state.selected.size}</strong> w moim planie</div></div></div>${commonbar()}<div id="list">${arr.map(s=>{let hour=s.start;if(last===hour)return card(s);last=hour;return `<div class="slot">${esc(hour)} · BLOK PROGRAMU</div>`+card(s)}).join('')||'<div class="empty">Brak wyników. Wyczyść wyszukiwanie lub zmień filtr.</div>'}</div>`}
-function mine(){
-  let arr=S.filter(s=>state.selected.has(s.id)), pp=P.filter(p=>state.posterSelected.has(p.id)), conf=arr.filter(s=>conflict(s).length);
-  return `<div class="panel"><h2>Twój konferencyjny plan</h2><p class="hint">Wybory zapisują się automatycznie na tym urządzeniu. Możesz je eksportować do kalendarza.</p><div class="counter"><b>${arr.length}</b> bloków programu · <b>${pp.length}</b> posterów · <b>${conf.length}</b> konfliktów czasowych</div><div class="actions"><button class="btn" data-action="ics">📅 Dodaj do kalendarza (.ics)</button><button class="btn alt" data-action="export">↓ Eksport wyborów (.json)</button><button class="btn outline" data-action="import">Wczytaj plan (.json)</button><button class="btn outline" data-action="clear">Wyczyść wybory</button></div><input type="file" id="importFile" accept="application/json,.json" hidden></div>${[1,2].map(d=>{let dayArr=arr.filter(s=>s.day===d).sort((a,b)=>a.start.localeCompare(b.start));return `<div class="plan-day-title"><h3>${d===1?'Piątek 13.11':'Sobota 14.11'}</h3><span>${dayArr.length} zapisanych</span></div>${dayArr.map(card).join('')||'<div class="empty">Nie masz jeszcze wybranych sesji na ten dzień.</div>'}`}).join('')}${pp.length?`<div class="panel"><h2>Zapisane postery (${pp.length})</h2>${pp.map(p=>`<p><b>#${p.num}</b> ${esc(p.title)}</p>`).join('')}</div>`:''}`
-}
+function agenda(){let q=state.query.toLocaleLowerCase();let arr=S.filter(s=>s.day===state.day&&(state.category==='all'||s.kind===state.category)&&[s.title,s.room,s.kind,...s.talks.flatMap(t=>[t.title,t.authors])].join(' ').toLocaleLowerCase().includes(q));let last='';let count=S.filter(s=>state.selected.has(s.id)&&s.day===state.day).length;return `<section class="panel agenda-intro"><div class="overline">Twój przewodnik konferencyjny</div><div class="agenda-intro-row"><div><h2>${state.day===1?'Piątek, 13 listopada':'Sobota, 14 listopada'}</h2></div><div class="agenda-count"><b>${count}</b><span>sesji w planie</span></div></div><p>Przeglądaj sesje w kolejności godzin, rozwiń wystąpienia i zaznacz te, na które chcesz pójść. Godziny lokalne Bostonu.</p><button class="agenda-shortcut" data-action="show-plan">Zobacz mój plan →</button></section>${commonbar()}<div id="list" class="timeline">${arr.map(s=>{let hour=s.start;if(last===hour)return card(s);last=hour;return `<div class="slot">${esc(hour)} · BLOK PROGRAMU</div>`+card(s)}).join('')||'<div class="empty">Brak wyników. Wyczyść wyszukiwanie lub zmień filtr.</div>'}</div>`}
+function mine(){let arr=S.filter(s=>state.selected.has(s.id)),pp=P.filter(p=>state.posterSelected.has(p.id)),conf=arr.filter(s=>conflict(s).length);return `<section class="panel"><div class="overline" style="color:#6e7c97;font-size:10px;font-weight:850;letter-spacing:.17em;text-transform:uppercase;margin-bottom:8px">Twój osobisty harmonogram</div><h2>Mój plan</h2><p class="hint">Twoje zapisane wydarzenia w jednym miejscu, po kolei. Wybory pozostają na tym urządzeniu.</p><div class="counter"><b>${arr.length}</b> sesji · <b>${pp.length}</b> posterów · <b>${conf.length}</b> konfliktów</div><div class="actions"><button class="btn" data-action="ics">Dodaj do kalendarza (.ics)</button><button class="btn alt" data-action="export">Eksportuj plan (.json)</button><button class="btn outline" data-action="import">Wczytaj plan</button><button class="btn outline" data-action="clear">Wyczyść</button></div><input type="file" id="importFile" accept="application/json,.json" hidden></section>${[1,2].map(d=>{let dayArr=arr.filter(s=>s.day===d).sort((a,b)=>a.start.localeCompare(b.start));return `<div class="plan-day-title"><h3>${d===1?'Piątek · 13.11':'Sobota · 14.11'}</h3><span>${dayArr.length} zapisanych</span></div>${dayArr.map(card).join('')||'<div class="empty">Nie masz jeszcze wybranych sesji na ten dzień.</div>'}`}).join('')}${pp.length?`<div class="panel"><h2>Zapisane postery (${pp.length})</h2>${pp.map(p=>`<p><b>#${p.num}</b> ${esc(p.title)}</p>`).join('')}</div>`:''}`}
 function posters(){
   let q=state.query.toLocaleLowerCase();
   let arr=P.filter(p=>(state.posterDay===0||p.day===state.posterDay)&&[p.title,p.authors,String(p.num)].join(' ').toLocaleLowerCase().includes(q));
@@ -76,7 +173,7 @@ function posters(){
 function travel(){return `<div class="panel"><h2>Na miejscu</h2><p><b>Samberg Conference Center</b><br>50 Memorial Drive, Cambridge, MA 02139, USA</p><p>To szybki przewodnik po lokalizacji, bez zbędnego przeładowania.</p></div><div class="two"><section class="panel"><h2>Układ pięter</h2><p><b>7. piętro:</b> rejestracja, lobby i Salon MIT.</p><p><b>6. piętro:</b> sale Dining Room dla sesji równoległych.</p><p>Po wejściu do budynku kieruj się od razu do wind i na 7. piętro po identyfikator.</p></section><section class="panel"><h2>Wskazówki</h2><p>W sobotę zabierz identyfikator z piątku. Godziny w aplikacji to czas Bostonu.</p><p>Jeżeli wybierzesz kilka sesji w tym samym czasie, Mój plan pokaże konflikt.</p><p>Na miejscu sprawdzaj oznaczenia organizatora — przydział sal może się zmienić.</p></section></div>`}
 function render(){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===state.tab));$('navCount').textContent=state.selected.size?`(${state.selected.size})`:'';$('topCount').textContent='★ Twój plan: '+state.selected.size;$('content').innerHTML=({agenda,mine,posters,travel}[state.tab]||agenda)()}
 function saveFile(content,filename,type){let a=document.createElement('a'),blob=new Blob([content],{type});a.href=URL.createObjectURL(blob);a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}function exportJSON(){saveFile(JSON.stringify({app:'CODEMIT2026',selected:[...state.selected],posters:[...state.posterSelected]},null,2),'CODE_MIT_2026_moj_plan.json','application/json')};function ics(){let chosen=S.filter(s=>state.selected.has(s.id));if(!chosen.length){notify('Najpierw wybierz sesje.');return}let ve=(day,time)=>`202611${day===1?'13':'14'}T${time.replace(':','')}00`;let clean=s=>String(s).replace(/\\/g,'\\\\').replace(/,/g,'\\,').replace(/;/g,'\\;').replace(/\n/g,'\\n');let lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//CODEMIT//Agenda Planner//PL','CALSCALE:GREGORIAN','X-WR-CALNAME:CODE@MIT 2026 — mój plan',...chosen.flatMap(s=>['BEGIN:VEVENT','UID:code2026-'+s.id+'@planner','DTSTART;TZID=America/New_York:'+ve(s.day,s.start),'DTEND;TZID=America/New_York:'+ve(s.day,s.end),'SUMMARY:'+clean(s.title),'LOCATION:'+clean('Samberg Conference Center, '+s.room+', 50 Memorial Drive, Cambridge MA'),'DESCRIPTION:'+clean(s.talks.map(t=>t.title+' — '+t.authors).join(' | ')),'END:VEVENT']),'END:VCALENDAR'];saveFile(lines.join('\r\n'),'CODE_MIT_2026_kalendarz.ics','text/calendar;charset=utf-8')}
-$('content').addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.day){state.day=Number(b.dataset.day);render()}else if(b.dataset.pday){state.posterDay=Number(b.dataset.pday);render()}else if(b.dataset.pick){let id=b.dataset.pick;if(state.selected.has(id))state.selected.delete(id);else state.selected.add(id);persist();render()}else if(b.dataset.ppick){let id=b.dataset.ppick;if(state.posterSelected.has(id))state.posterSelected.delete(id);else state.posterSelected.add(id);persist();render()}else if(b.dataset.open){let id=b.dataset.open;if(state.open.has(id))state.open.delete(id);else state.open.add(id);render()}else if(b.dataset.action==='ics')ics();else if(b.dataset.action==='export')exportJSON();else if(b.dataset.action==='print')window.print();else if(b.dataset.action==='import')$('importFile').click();else if(b.dataset.action==='clear'){if(confirm('Usunąć zapisane wybory?')){state.selected.clear();state.posterSelected.clear();persist();render()}}else if(b.dataset.action==='install'){if(window.pwaInstallPrompt){window.pwaInstallPrompt.prompt();window.pwaInstallPrompt.userChoice.then(()=>{window.pwaInstallPrompt=null})}else notify('Na iPhonie użyj Safari → Udostępnij → Dodaj do ekranu początkowego. Na Androidzie otwórz menu Chrome.')}});
+$('content').addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.day){state.day=Number(b.dataset.day);render()}else if(b.dataset.pday){state.posterDay=Number(b.dataset.pday);render()}else if(b.dataset.pick){let id=b.dataset.pick;if(state.selected.has(id))state.selected.delete(id);else state.selected.add(id);persist();render()}else if(b.dataset.ppick){let id=b.dataset.ppick;if(state.posterSelected.has(id))state.posterSelected.delete(id);else state.posterSelected.add(id);persist();render()}else if(b.dataset.open){let id=b.dataset.open;if(state.open.has(id))state.open.delete(id);else state.open.add(id);render()}else if(b.dataset.action==='show-plan'){state.tab='mine';state.query='';render();window.scrollTo({top:0,behavior:'smooth'})}else if(b.dataset.action==='ics')ics();else if(b.dataset.action==='export')exportJSON();else if(b.dataset.action==='print')window.print();else if(b.dataset.action==='import')$('importFile').click();else if(b.dataset.action==='clear'){if(confirm('Usunąć zapisane wybory?')){state.selected.clear();state.posterSelected.clear();persist();render()}}else if(b.dataset.action==='install'){if(window.pwaInstallPrompt){window.pwaInstallPrompt.prompt();window.pwaInstallPrompt.userChoice.then(()=>{window.pwaInstallPrompt=null})}else notify('Na iPhonie użyj Safari → Udostępnij → Dodaj do ekranu początkowego. Na Androidzie otwórz menu Chrome.')}});
 $('content').addEventListener('input',e=>{if(e.target.id==='search'){let pos=e.target.selectionStart;state.query=e.target.value;const oldScroll=window.scrollY;render();let input=$('search');if(input){input.focus();input.setSelectionRange(pos,pos)}window.scrollTo(0,oldScroll)}});$('content').addEventListener('change',e=>{if(e.target.id==='category'){state.category=e.target.value;render()}else if(e.target.id==='importFile'&&e.target.files?.[0]){let rd=new FileReader;rd.onload=()=>{try{let o=JSON.parse(rd.result);if(o.app!=='CODEMIT2026'||!Array.isArray(o.selected)||!Array.isArray(o.posters))throw Error('Invalid');if(!confirm('Wczytać plan i zastąpić obecne wybory?'))return;state.selected=new Set(o.selected.filter(id=>S.some(s=>s.id===id)));state.posterSelected=new Set(o.posters.filter(id=>P.some(p=>p.id===id)));persist();state.tab='mine';render();notify('Plan został zaimportowany')}catch(err){notify('Nieprawidłowy plik wyborów')}};rd.readAsText(e.target.files[0])}});
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.pwaInstallPrompt=e});if('serviceWorker' in navigator && location.protocol.startsWith('http')){let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshing){refreshing=true;window.location.reload()}});window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=8',{updateViaCache:'none'}).then(reg=>reg.update()).catch(()=>{}))}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{state.tab=b.dataset.tab;state.query='';render();window.scrollTo({top:0,behavior:'instant'})}));render()})();
 </script></body></html>
